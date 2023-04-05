@@ -1,0 +1,35 @@
+
+#include <iostream>
+
+using namespace std;
+
+void Cal(int, char, int);
+
+int main()
+{
+   int integer1, integer2;
+   char character;	
+   cout << "Enter first number: " << endl;
+   cin >> integer1;
+   cout << "Enter an operation character(+,-,*,/): " << endl;
+   cin >> character;
+   cout << "Enter second number: " << endl;
+   cin >> integer2;
+   
+   Cal(integer1, character, integer2);
+   return 0;
+}
+
+void Cal(int x, char y, int z)
+{
+   if (y == '+')
+   cout << "The sum of two numbers is: " << x + z << endl;
+   else if (y == '-')
+   cout << "The difference between two numbers is: " << x - z << endl;
+   else if (y == '*')
+   cout << "The product of two numbers is: " << x * z << endl;
+   else if (y == '/')
+   cout << "The division between two numbers is: " << x / z << endl;
+   else
+   cout << "Incorrect syntax" << endl;
+}
